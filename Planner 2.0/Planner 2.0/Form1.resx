@@ -123,9 +123,6 @@
   <metadata name="toolformhelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>219, 17</value>
   </metadata>
-  <metadata name="toolformhelp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>219, 17</value>
-  </metadata>
   <data name="metroLabel3.Text" xml:space="preserve">
     <value>Planner: programmed and developed by Clarence Yang
 Project start date: 19/4/2019
@@ -140,6 +137,7 @@ Copyright © 2019 - 2021
 New in 2.1.2:
 - Bug fixes
 - Minor UI updates
+- finally released to github! Check it out!
 
 
 </value>

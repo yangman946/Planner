@@ -399,7 +399,7 @@
             this.metroLabel3.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.metroLabel3.Location = new System.Drawing.Point(15, 66);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(433, 400);
+            this.metroLabel3.Size = new System.Drawing.Size(433, 425);
             this.metroLabel3.TabIndex = 24;
             this.metroLabel3.Text = resources.GetString("metroLabel3.Text");
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Light;
