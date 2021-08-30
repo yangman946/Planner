@@ -1,0 +1,20 @@
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\bin\Debug\Planner 2.0.exe.config
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\bin\Debug\Planner 2.0.exe
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\bin\Debug\Planner 2.0.pdb
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.Properties.Resources.resources
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.csproj.GenerateResource.cache
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.exe
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.pdb
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.Planner.resources
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.TasksDone.resources
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.TaskInfo.resources
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.csproj.CopyComplete
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\bin\Debug\MetroFramework.dll
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\bin\Debug\MetroFramework.Fonts.dll
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\bin\Debug\Planner 2.0.exe.manifest
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\bin\Debug\Planner 2.0.application
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.TrustInfo.xml
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.exe.manifest
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.application
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.SplashScreen.resources
+D:\clarence's stuff\C# projects\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.csprojAssemblyReference.cache
