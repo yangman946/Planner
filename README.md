@@ -1,7 +1,7 @@
 # Planner
 
 <p align="center">
-<img src="https://github.com/yangman946/Planner/blob/main/Planner%202.0/planner2.0%20icon.png?raw=true" alt="planner">
+<img src="https://github.com/yangman946/Planner/blob/main/Planner%202.0/planner2.0%20icon.png?raw=true" alt="planner" style="width: 50px; height: 50px;">
 
 ## About
   
