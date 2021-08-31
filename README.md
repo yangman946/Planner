@@ -1,15 +1,21 @@
-# Planner
 
 <p align="center">
-<img src="https://github.com/yangman946/Planner/blob/main/Planner%202.0/planner2.0%20icon.png?raw=true" alt="planner" width="50" height="50">
+<img src="https://github.com/yangman946/Planner/blob/main/Planner%202.0/planner2.0%20icon.png?raw=true" alt="planner" width="200" height="200">
+<h1 align="center">Planner</h1>
+</p>
+<hr>
 
 ## About
   
 Planner is a program that allows you to easily manage your tasks.
+<br>
   
+
 <p align="center">
-<img src="https://github.com/yangman946/Planner/blob/main/Planner%202.0/screenshot.PNG?raw=true" alt="planner">
- 
+<img src="https://github.com/yangman946/Planner/blob/main/Planner%202.0/screenshot.PNG?raw=true" alt="planner" width="483" height="507">
+</p>
+
+
 ## Cloning
   
 `$ git clone https://github.com/yangman946/Planner`
