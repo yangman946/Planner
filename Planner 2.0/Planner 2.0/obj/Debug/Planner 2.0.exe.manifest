@@ -67,26 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Planner 2.0.exe" size="570368">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Planner 2.0.exe" size="602624">
       <assemblyIdentity name="Planner 2.0" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>46WyS39gj1mkPzN9zrjJxG9j1QOwQiIXqhEylP5Z/UQ=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ToggleSlider.dll" size="10240">
-      <assemblyIdentity name="ToggleSlider" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uY/zzHWbSmDsik3GTdujNGyktOxGCUXGSOBs/JwEUUE=</dsig:DigestValue>
+        <dsig:DigestValue>XBoX0uF57SSLcINGpFFO3P2zIhadvK1dMNSNErKId/g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -100,9 +100,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="ToggleSlider">
-      <HintPath>C:\Users\kev\Downloads\toggle-switch-master\toggle-switch-master\ToggleSlider\bin\Debug\ToggleSlider.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="createTask.cs" />
@@ -206,6 +203,8 @@
     <None Include="Resources\planner2_0_icon_woV_icon.ico" />
     <None Include="Resources\discord-logo.png" />
     <None Include="Resources\1147px-Google_Drive_icon_%282020%29.svg.png" />
+    <None Include="Resources\25231.png" />
+    <None Include="Resources\discord_icon_130958.png" />
     <Content Include="Resources\white file.png" />
     <None Include="Resources\whitefolder1.png" />
     <None Include="Resources\white file1.png" />

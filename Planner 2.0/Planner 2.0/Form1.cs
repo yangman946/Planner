@@ -6,16 +6,11 @@
  *  - to fix a common issue ^ above
  *  Note: ignore regions, they are mainly unchanged, DO NOT DELETE 
  *  
- *  
- *  todo:
- *  - review all code and clean up: clean spaget code
- *  - fix the recent panel
- *  - fix pinned tasks
- *  - add setup release
- *  - fix all bugs for release
- *  
- *  log:
- *  - 
+ *  todo: 
+ *  - rewrite news function
+ *  - implement google UI
+ *  - clean code further
+ *  - update installer
  */
 
 using System;
@@ -44,7 +39,7 @@ namespace Planner_2._0
     {
         #region version stuff, change everytime theres a new version
         // version stuff, important, change this everytime theres a new version
-        public const int versionNumber = 211; // current version
+        public const int versionNumber = 212; // current version
         public string link = "https://drive.google.com/drive/folders/1s8---hX7PNRC-whkjVFzDYGladvnVTGH"; //link to new version, ignore contents, just placeholder
         public string tempVersionNumber; //collected version for newest version as string
         public string[] receivedOut; //output, version and link; also other commands
@@ -159,14 +154,6 @@ namespace Planner_2._0
         Panel newProject = new Panel();
         Panel defaultProject = null;
 
-        #region ramcleaner
-        //ram cleaners
-        [DllImport("KERNEL32.DLL", EntryPoint = "SetProcessWorkingSetSize", SetLastError = true, CallingConvention = CallingConvention.StdCall)]
-        internal static extern bool SetProcessWorkingSetSize32Bit (IntPtr pProcess, int dwMinimumWorkingSetSize, int dwMaximumWorkingSetSize);
-
-        [DllImport("KERNEL32.DLL", EntryPoint = "SetProcessWorkingSetSize", SetLastError = true, CallingConvention = CallingConvention.StdCall)]
-        internal static extern bool SetProcessWorkingSetSize64Bit (IntPtr pProcess, long dwMinimumWorkingSetSize, long dwMaximumWorkingSetSize);
-        #endregion
 
         //for saved status
         public DateTime saveddate;
@@ -174,12 +161,6 @@ namespace Planner_2._0
         //public bool quickopen = false;
         public string openstring = "";
 
-
-            
-
-
-
-        //}
 
         public Planner() //initiate
         {   
@@ -197,30 +178,18 @@ namespace Planner_2._0
         private void Planner_Load(object sender, EventArgs e) //what to do on start
         {
             //TopMost = true;
-            this.Activate();
+            //this.Activate();
             hidepanels(); //hide panels
-            initiateSettings();
+            //initiateSettings();
+
             //we are just getting the amounts of tasks by using the number of start timer dates
             TaskCount.Text = formatTaskText(startTimerDates.Count);
             //reset
             comboBox1.SelectedIndex = 0;
             comboBox1_SelectedIndexChanged(comboBox1, EventArgs.Empty);
-            //reset flowlayout panel
-            List<Control> C = flowLayoutPanel1.Controls.Cast<Control>().ToList();
-            foreach (Control control in C)
-            {
-                // do i need to remove the values from groupboxes[] ***
-                flowLayoutPanel1.Controls.Remove(control);
-                control.Dispose();
-            }
 
-            hasExit = false;
-            pressedX = false;
 
-            saved = false;
 
-            Inforemove = false;
-            InfoApply = false;
 
             panel1.Show();
 
@@ -242,35 +211,44 @@ namespace Planner_2._0
 
             label13.Text = "Unsaved";
 
-            bf = new BinaryFormatter();
+   
             title = "";
             info = "";
             start = DateTime.Now;
             end = DateTime.Now;
 
-            hasOpened = false;
             //panels
             defaultProject = project;
             newProject = project;
             setTheme();
-            darkmode(); //theme checks
+            //darkmode(); //theme checks
 
-            resetState();
-            setStates();
+            //resetState();
+            //();
 
-            receivedOut = getNewsInfo(); //////////////////////////////
+
+            //setProjectControls();
             
-            tempVersionNumber = receivedOut[0];
-            link = receivedOut[1];
-            command = receivedOut[2];
-
-            setProjectControls();
-
-
+            this.Shown += new EventHandler(AfterLoading);
 
 
 
         }
+
+        private void AfterLoading(object sender, EventArgs e)
+        {
+            new Thread(delegate () {
+                this.Activated -= AfterLoading;
+                receivedOut = getNewsInfo(); //////////////////////////////
+
+                tempVersionNumber = receivedOut[0];
+                link = receivedOut[1];
+                command = receivedOut[2];
+                //MessageBox.Show("done");
+            }).Start();
+
+        }
+
 
         string formatTaskText(int count)
         {
@@ -1533,6 +1511,7 @@ namespace Planner_2._0
 
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.Filter = "PLAN File | *.plan"; //must be a .plan file extension.
+            bf = new BinaryFormatter();
 
             if (openFile.ShowDialog() == DialogResult.OK)
             {
@@ -1668,6 +1647,7 @@ namespace Planner_2._0
         {
             try
             {
+                bf = new BinaryFormatter();
                 string fileName = FormListNames[index];
 
                 string Path = FormListDir[index];
@@ -1963,33 +1943,6 @@ namespace Planner_2._0
 
         } //our tick function that handles timing for the progress bars
 
-        void flushmem()
-        {
-            Process currentProc = Process.GetCurrentProcess();
-            long memoryUsed = currentProc.PrivateMemorySize64;
-
-
-            if (memoryUsed > 30000000)
-            {
-                GC.Collect();
-                GC.WaitForPendingFinalizers();
-                if (Environment.OSVersion.Platform == PlatformID.Win32NT)
-                {
-
-                    SetProcessWorkingSetSize32Bit(System.Diagnostics
-                       .Process.GetCurrentProcess().Handle, -1, -1);
-
-                }
-            }
-
-
-
-        }
-
-        private void timer2_Tick(object sender, EventArgs e) //
-        {
-            flushmem(); //flush memory <-------------------------- memory leak?
-        }
 
         void checkDates() //check if any tasks are done
         {
@@ -2049,8 +2002,13 @@ namespace Planner_2._0
                     GetNews g = new GetNews();
                     List<string> News = new List<string>();
                     News = g.getInfo();
-
-
+                    
+                    if (this.richTextBox1.InvokeRequired)
+                    {
+                        richTextBox1.Invoke(new MethodInvoker(delegate {
+                            richTextBox1.Text = "";
+                        }));
+                    }
                     string versionTemp = News[0];
                     string first = versionTemp.Replace("OUT NOW", ""); //getting versions
                     formattedNumb = first;
@@ -2060,9 +2018,15 @@ namespace Planner_2._0
 
                     for (int i = 0; i < News.Count; i++)
                     {
-                        richTextBox1.AppendText(News[i]);
-                        richTextBox1.AppendText(Environment.NewLine);
-                        richTextBox1.AppendText(Environment.NewLine);
+                        if (this.richTextBox1.InvokeRequired)
+                        {
+                            richTextBox1.Invoke(new MethodInvoker(delegate {
+                                richTextBox1.AppendText(News[i]);
+                                richTextBox1.AppendText(Environment.NewLine);
+                                richTextBox1.AppendText(Environment.NewLine);
+                            }));
+                        }
+
                     }
                     output[0] = final;
 
@@ -2077,10 +2041,20 @@ namespace Planner_2._0
             catch
             {
                 //no internet
-                richTextBox1.Text = "Error, Failed to load Planner news. (press HELP for troubleshooting tips.)";
+                if (this.richTextBox1.InvokeRequired)
+                {
+                    richTextBox1.Invoke(new MethodInvoker(delegate { this.richTextBox1.Text = "Error, Failed to load Planner news. (press HELP for troubleshooting tips.)"; }));
+                }
+                else
+                {
+                    this.richTextBox1.Text = "Error, Failed to load Planner news. (press HELP for troubleshooting tips.)";
+                }
+
                 return output;
             }
         }
+
+        delegate void SetTextCallback(string text);
 
         public void checkVersion()
         {
@@ -3146,5 +3120,9 @@ namespace Planner_2._0
             button19.BackColor = Color.Transparent; // or Color.Red or whatever you want
         }
 
+        private void button20_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/yangman946/Planner");
+        }
     }
 }

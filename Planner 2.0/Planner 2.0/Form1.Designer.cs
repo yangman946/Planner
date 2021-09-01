@@ -44,6 +44,7 @@
             this.plannerDocumentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.about = new System.Windows.Forms.Panel();
+            this.button20 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
@@ -172,7 +173,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.saveTimer = new System.Windows.Forms.Timer(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.timer_elapsed = new System.Windows.Forms.Timer(this.components);
@@ -338,6 +338,7 @@
             // 
             this.about.AutoScroll = true;
             this.about.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.about.Controls.Add(this.button20);
             this.about.Controls.Add(this.button19);
             this.about.Controls.Add(this.button18);
             this.about.Controls.Add(this.metroTile7);
@@ -351,6 +352,22 @@
             this.about.Size = new System.Drawing.Size(727, 710);
             this.about.TabIndex = 1;
             this.about.Visible = false;
+            // 
+            // button20
+            // 
+            this.button20.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button20.BackgroundImage = global::Planner_2._0.Properties.Resources._25231;
+            this.button20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button20.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button20.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20.Location = new System.Drawing.Point(186, 472);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(50, 50);
+            this.button20.TabIndex = 39;
+            this.toolformhelp.SetToolTip(this.button20, "Discord");
+            this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button19
             // 
@@ -372,14 +389,14 @@
             // button18
             // 
             this.button18.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button18.BackgroundImage = global::Planner_2._0.Properties.Resources.discord_logo;
+            this.button18.BackgroundImage = global::Planner_2._0.Properties.Resources.discord_icon_130958;
             this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button18.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Location = new System.Drawing.Point(109, 466);
+            this.button18.Location = new System.Drawing.Point(109, 472);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(60, 60);
+            this.button18.Size = new System.Drawing.Size(50, 50);
             this.button18.TabIndex = 36;
             this.toolformhelp.SetToolTip(this.button18, "Discord");
             this.button18.UseVisualStyleBackColor = false;
@@ -1289,7 +1306,7 @@
             this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.richTextBox1.Size = new System.Drawing.Size(461, 244);
             this.richTextBox1.TabIndex = 26;
-            this.richTextBox1.Text = "";
+            this.richTextBox1.Text = "Loading news...";
             this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
             // 
             // label16
@@ -2016,11 +2033,6 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "General Settings";
             // 
-            // timer2
-            // 
-            this.timer2.Interval = 15000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // saveTimer
             // 
             this.saveTimer.Interval = 60000;
@@ -2047,9 +2059,9 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(727, 735);
             this.Controls.Add(this.about);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.project);
             this.Controls.Add(this.help);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.themePanel);
             this.Controls.Add(this.Options);
             this.Controls.Add(this.menuStrip1);
@@ -2232,7 +2244,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer saveTimer;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel15;
@@ -2258,6 +2269,7 @@
         private MetroFramework.Controls.MetroCheckBox metroCheckBox3;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button button20;
     }
 }
 

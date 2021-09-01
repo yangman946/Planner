@@ -25,7 +25,6 @@ C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\bin\Debug\Planne
 C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\bin\Debug\Planner 2.0.pdb
 C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\bin\Debug\MetroFramework.dll
 C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\bin\Debug\MetroFramework.Fonts.dll
-C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\obj\Debug\Planner 2.0.csprojAssemblyReference.cache
 C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.Planner.resources
 C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.Properties.Resources.resources
 C:\Users\clare\Documents\GitHub\Planner\Planner 2.0\Planner 2.0\obj\Debug\Planner_2._0.SplashScreen.resources
